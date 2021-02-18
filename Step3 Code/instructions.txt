@@ -1,0 +1,28 @@
+In this folder we have 3 files to worry about:
+	buildMain.sh
+	main.cpp
+	main.out
+
+First, copy all files from the BNOAddition directory into the same directory you wish to execute from, I recommend putting them in a folder in the Desktop.
+navigate to the directory with the files in them from the terminal
+If you put it on the desktop, this is what command you'd use:
+	cd Desktop/folderName
+
+
+Our program is the main.cpp file, we can modify the code either through a normal text editor or through the command
+	nano main.cpp
+	*in order to save the changes you make, use the command Ctrl+X and save the file as main.cpp*
+
+Before we can run the program, we need to compile and build it
+The command for it has been prewritten in our buildMain.sh file, so execute the build file with
+	./buildMain.sh
+
+Likely, the program will not be executable right away. If it is not listed as an executable, run the following command
+	sudo chmod +x *.sh
+
+Once this command finishes, the program can be run with the command
+	./main.out
+
+Exit the program with Ctrl+C
+
+When making changes, repeat the steps starting from "nano main.cpp" and recompile
