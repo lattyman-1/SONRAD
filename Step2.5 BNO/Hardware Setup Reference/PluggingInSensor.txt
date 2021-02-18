@@ -1,0 +1,10 @@
+Vin -> black
+GND -> white
+SDA -> Gray
+SCL -> Purple
+
+pin 1 -> black
+pin 2 -> gray
+pin 3 -> Purple
+pin 4 -> N/A
+pin 5 -> GND

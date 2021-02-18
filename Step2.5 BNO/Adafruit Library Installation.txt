@@ -1,0 +1,87 @@
+Following this tutorial:
+
+
+
+Make sure the packages are up to date on the pi
+	sudo apt-get update
+	sudo apt-get upgrade -y
+	sudo apt-get dist-upgrade -y
+
+
+Installing the adafruit_blinka libraries
+	pip3 install adafruit-blinka
+
+This will install the circuitpython library, not a C library... maybe we can port it from python into c++
+
+
+
+IGNORE ABOVE
+
+Download the other folder containing all the files
+What we do:
+	Folder containing our main.cpp and buildmain.sh file
+	
+	Add the utility folder from downloaded folder into the same directory as main.cpp
+	
+
+
+
+	Copy the IMUMATHS.h file into the new directory
+	
+
+
+
+Current command using:
+
+gcc ___.cpp -o main.out -lpigpio -lstdc++ -lpthread
+			pigpio 	 c++ stuff  threads
+
+files modified slightly to call from the shared directory they are all in
+
+
+sudo raspi-config
+	option 5: interfacing options
+	IC2 -> enable it
+
+
+configuring I2C
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+
+sudo apt-get install -y python-smbus
+sudo apt-get install -y i2c-tools
+
+_________________________________________________________________________________________
+
+STEPS USED:
+sudo raspi-config
+	option 5: interfacing options
+	IC2 -> enable it
+
+
+configuring I2C
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+
+sudo apt-get install -y python-smbus
+sudo apt-get install -y i2c-tools
+
+move the following files into the same directory as the main function:
+	imumaths.h
+	matrix.h
+	RPi_BNO055.h
+	RPi_BNO055.cpp
+	vector.h
+	RPi_Sensor.h
+*All of these files should be included in the download from the zipped folder*
+
+Make sure the sensor is plugged in properly, I will attach pictures in the folder illustrating the positions of the pins on the board and where they should plug into
+
+SHOULD BE SET UP AND GOOD TO RUN NOW
+if fail then make sure that all steps have been followed, and that the pi is up to date
+
+
+If the program fails to run, then make sure to run the program as a superuser:
+	sudo ./main.out
+if you don't the gpio pins are unable to be used, safety of external modifications
+
+
+

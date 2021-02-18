@@ -1,0 +1,5 @@
+BNO ORIENTATION AXIS
+
+X: Left/Right -> Negative/Positive
+Y: Up/Down -> Positive/Negative
+Z: Rotations Clockwise/CounterClockwise -> positive/negative
