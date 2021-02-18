@@ -1,6 +1,7 @@
 # SONRAD
 Documentation for the installation and setup of the Raspberry Pi environment for the 2021 Villanova SONRAD Capstone Project
 
+Programming done by Benjamin Lattmann
 In order to replicate the installation of the Raspberry Pi environment used in our SONRAD project, begin with the instructions in step 1 and proceed from there. 
 Once finished with the instructions in step 1, proceed to the next step and continue.
 
