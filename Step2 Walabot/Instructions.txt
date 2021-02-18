@@ -1,0 +1,51 @@
+There are 2 Walabot files in this folder, one is a walabot.DEB file and one is walabot.exe file
+
+The .exe is a windows-compatible installer, this will allow you to utilize the tutorial environment to observe basic applications of the sensor with more tangible feedback
+
+The .deb file is the raspberry pi file we will use for installing the API
+
+Instructions:
+1. Unpackage the .deb file
+	You should be able to double-click on the .deb file once it is downloaded to the pi to open up the package installer
+	This will open up and get the first parts of the walabot API prepared for you
+	THE WALABOT API WILL NOT BE FUNCTIONAL AT THIS POINT
+
+	if this does not work, type the following command into the terminal (you need to be in the directory you have the .deb file saved to)
+		sudo dpkg -i ___.deb
+
+2. navigate to the .tar.gz file
+	open up terminal
+	we need to get to the folder which was just installed onto the pi
+	first, we should get to the home directory
+		cd *terminal commands are indented like this*
+	then we want to navigate out of the home directory backwards
+		cd ..
+		cd ..
+	yes, do the command twice, you should be in the directory labeled as "pi@raspberrypi:/ $" I believe. you cannot go any further up the ladder
+	Now we navigate to the newly installed folder
+		cd /usr/share/walabot/python
+
+	Run the API installer:
+		python3 -m pip install WalabotAPI-XXX.XXX.XXX.tar.gz
+	IF IT SAYS "pip not installed" or something like that:
+		sudo apt install python3-pip
+
+	The API should now be successfully installed
+	We can check if it installed properly
+	Navigate back to the starting folder
+		cd
+		cd ..
+		cd ..
+		cd /usr/include
+		ls
+	*look for the file named WalabotAPI.h*
+	if you find the file then it is installed correctly and good to go
+
+We can't forget the SFML API files, so we just have to tell our package manager to grab and install that file
+(referenced from https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
+
+	type into the terminal:
+		sudo apt-get install libsfml-dev
+	Once installed, we should be good to proceed onto the next step
+
+	(When compiling files with this library, additional extensions are required with the compile command. Examples are in the link provided, or you can look at the contents of the buildmain.sh file for more info)
