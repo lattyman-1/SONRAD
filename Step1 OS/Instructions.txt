@@ -1,0 +1,21 @@
+I used the tool Win32DiskImager to install the operating system onto the SD card
+
+This is the exact operating system and tool I used, not sure how any other downloads might affect the functionality
+(GitHub has a file size limit so the exact version I used is the file named "2018-11-13-raspbian-stretch-full". Any version of raspbian should work)
+
+One the system has been installed, try to follow these instructions:
+1. Follow boot instructions to set language, time, password, etc
+	-I used password SONRAD (some type of capitalization SONRAD/Sonrad/sonrad)
+	-It shouldn't matter which one you use, just as long as you remember it
+2. Update the system (type into terminal)
+	sudo apt update
+	sudo apt full-upgrade
+this step will take a long time and requires internet connection, so make sure you're ready for that part
+
+Established a VNC server on the Pi, allowing me to connect virtually to the pi from my laptop and use my trackpad and keyboard
+	Purely convenience, it can be a little annoying sometimes so this step is optional
+	Here's the link I followed to set it up
+	https://www.raspberrypi.org/documentation/remote-access/vnc/
+		WARNING: I have had it where the server does not always boot up on start, and I have to manually turn it on and then restart the pi to have access to it
+
+Pi should be set up and good to go at this point, now we install the sensor libraries
